@@ -4,7 +4,8 @@
   "description": "A simple todo list app built with React, Redux and Webpack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server/server.js"
+    "build":"/node_models/.bin/webpack",
+    "serve": "rimraf  npm-debug.log &&   webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,11 @@
     "babel-preset-react": "^6.3.13",
     "express": "^4.13.4",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "webpack": "^1.12.13"
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "webpack": "^1.12.13",
+    "rimraf": "^2.6.1"
   }
 }
