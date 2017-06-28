@@ -4,7 +4,7 @@
   "description": "A simple todo list app built with React, Redux and Webpack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"/node_models/.bin/webpack",
+    "build":"webpack",
     "serve": "rimraf  npm-debug.log &&   webpack --config webpack.config.js"
   },
   "repository": {
