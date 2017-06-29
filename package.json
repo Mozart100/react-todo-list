@@ -25,6 +25,7 @@
   "devDependencies": {
     "nodemon": "^1.11.0",
     "webpack": "^1.12.13",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "babel-preset-react-hmre": "^1.1.0"
   }
 }
