@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 
 
-class App extends Component {
+var App = React.createClass({
     render() {
-        return
-        (
-            <div> This is definitely a React component. </div>
-        );
+        return <div> This is definitely a React component. </div>;
     }
-}
+})
 
 export default App;
 
 
- //  "tmp": "webpack --config webpack.config.js && nodemon server/server.js"
 
 
