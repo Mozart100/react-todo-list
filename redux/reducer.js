@@ -7,8 +7,9 @@ function getId(state) {
 
 export default function reducer(state, action) {
     switch (action.type) {
+        
         case 'ADD_TODO':
-            state.todos = Object.assign({}, state, {
+            return Object.assign({}, state, {
                 todos: [
                     { text: action.text, completed: false, id: getId(state) },
                     ...state.todos]

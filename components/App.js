@@ -9,8 +9,8 @@ class App extends Component {
         return (
             <div>
                 <div>Todo List.</div>
-            <TodoInput />
-                <TodoList todos={this.props.todos}/>
+                <TodoInput dispatch={this.props.dispatch}/>
+                <TodoList dispatch={this.props.dispatch} todos={this.props.todos} />
             </div>
         )
     }
