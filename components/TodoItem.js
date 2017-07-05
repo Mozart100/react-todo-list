@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import actions from '../redux/actions';
 
 class TodoItem extends Component {
 
     handleComplete() {
-
+        this.props.dispatch(actions.completeTodo(this.props.todo.id));
     }
 
 
-    handleDete() {
-
+    handleDelete() {
+        this.props.dispatch(actions.deleteTodo(this.props.todo.id));
     }
 
     render() {
@@ -17,7 +18,7 @@ class TodoItem extends Component {
             <li>
                 <div>{this.props.todo.text}</div>
                 <button onClick={this.handleComplete.bind(this)}>Mark as completed</button>
-                <button onClick={this.handleDete.bind(this)}>Mark as Deleted</button>
+                <button onClick={this.handleDelete.bind(this)}>Mark as Deleted</button>
             </li>
         );
     }
