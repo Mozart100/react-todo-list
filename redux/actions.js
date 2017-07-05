@@ -14,6 +14,7 @@ let  actions = {
             
         }
     },
+    
     deleteTodo:function(id)
     {
         return {
