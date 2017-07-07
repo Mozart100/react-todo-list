@@ -23,7 +23,7 @@ let actions = {
     },
     createNewUserId: function () {
         return {
-            type: 'CREATE_USER_ID',
+            type: 'CREATE_NEW_USER_ID',
             id:Math.round( Math.random() * 100)
         }
     }
