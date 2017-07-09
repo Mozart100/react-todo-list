@@ -11,18 +11,18 @@ export default function todoReducer(todos= [], action) {
             return [{
                 text: action.text,
                 completed: false,
-                id: getId(state)
+                id: getId(todos)
             }, ...todos];
 
         case 'COMPLETE_TODO':
-            return state.todos.map((todo) => {
+            return todos.map((todo) => {
                 return todo.id === action.id ?
                     Object.assign({}, todo, { completed: !todo.completed })
                     : todo
             });
 
         case 'DELETE_TODO':
-            return todos.filter(todo => {
+            return filter(todo => {
                 return todo.id !== action.id
             });
 
