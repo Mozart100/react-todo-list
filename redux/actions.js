@@ -26,6 +26,16 @@ let actions = {
             type: 'CREATE_NEW_USER_ID',
             id: Math.round(Math.random() * 100)
         }
+    },
+    createNewUserIfId0add: function () {
+        return (dispatch, getState) => {
+            const { user } = getState();
+            if (user.id % 2 ===0)
+            {
+                return;
+            }
+            dispatch(actions.createNewUserId())
+        };
     }
 }
 export default actions;
