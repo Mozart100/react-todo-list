@@ -4,8 +4,13 @@ var config = require('../webpack.config');
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
+var chalk = require('chalk');
+var opn = require('opn');
+// const { spawn } = require('child_process');
 
+//  var Proc = require('child_process');
 
+let log =console.log;
 
 var app = express();
 
@@ -24,5 +29,11 @@ var port = 3000;
 
 app.listen(port, function (error) {
   if (error) throw error;
-  console.log("Express server listening on port", port);
+  log(chalk.cyan("Express server listening on port", port));
+  opn("http://localhost:3000/",{app: 'chrome',});
+  // console.log("Express server listening on port", port);
+  // childProc
+  // Proc.spawn("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",["http://localhost:3000"],{})
 });
+
+
