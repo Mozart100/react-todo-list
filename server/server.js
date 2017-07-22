@@ -6,6 +6,7 @@ var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
 var chalk = require('chalk');
 var opn = require('opn');
+require('dotenv').config();
 // const { spawn } = require('child_process');
 
 //  var Proc = require('child_process');
@@ -25,7 +26,7 @@ app.use('/', function (req, res) {
   res.sendFile(path.resolve('client/index.html'));
 });
 
-var port = 3000;
+var port = process.env.MY_PORT;
 
 app.listen(port, function (error) {
   if (error) throw error;
